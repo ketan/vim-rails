@@ -1132,8 +1132,8 @@ function! s:Rake(bang,lnum,arg)
   let old_makeprg = &l:makeprg
   let old_errorformat = &l:errorformat
   try
-    if &l:makeprg !~# 'rake'
-      let &l:makeprg = 'rake'
+    if &l:makeprg !~# '_vim_ruby -S rake'
+      let &l:makeprg = '_vim_ruby -S rake'
     endif
     let &l:errorformat = s:efm_backtrace
     let arg = a:arg
